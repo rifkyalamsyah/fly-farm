@@ -79,6 +79,13 @@ h4 {
   border: 2px solid var(--black);
 }
 
+.btn-yellow {
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  border-radius: 100px;
+  color: var(--black);
+  background-color: var(--yellow);
+}
 /* hover */
 .btn:hover {
   background-color: var(--dark-grey);
@@ -90,10 +97,14 @@ h4 {
   color: var(--white);
   transition: 1s ease;
 }
+
+.btn-yellow:hover {
+  color: var(--white);
+  background-color: var(--dark-grey);
+}
 /* custom button end*/
 
-/* custom margiin */
-/* margin */
+/* custom margin */
 .mt-1 {
   margin-top: 1rem;
 }
@@ -101,8 +112,9 @@ h4 {
 .mt-2 {
   margin-top: 2rem;
 }
+/* custom margin end */
 
-/* padding */
+/* custom padding */
 .pt-1 {
   padding-top: 1rem;
 }
@@ -110,7 +122,20 @@ h4 {
 .pt-2 {
   padding-top: 2rem;
 }
-/* custom margiin end */
+
+/* padding-x */
+.px-1 {
+  padding: 0 1rem;
+}
+
+.px-2 {
+  padding: 0 2rem;
+}
+
+.px-10 {
+  padding: 0 10rem;
+}
+/* custom padding end */
 
 /* banner */
 .banner {
@@ -174,6 +199,10 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.hero-warpper .title-wrapper {
+  width: 200px !important;
 }
 
 .hero-warpper img {
@@ -244,11 +273,16 @@ body {
   padding: 4rem 0;
   /* background-color: grey; */
 }
+
 .feature-2nd .heading-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: end;
   gap: 2rem;
+}
+
+.feature-2nd .heading-wrapper p {
+  max-width: 760px;
 }
 
 .feature-2nd .f-img-2nd img {
@@ -262,14 +296,15 @@ body {
 
 .feature-2nd .card-wrapper {
   display: flex;
+  justify-content: space-between;
   gap: 2rem;
 }
 
 .feature-2nd .card-wrapper .card-feature {
-  /* display: flex; */
-  padding:2rem;
+  padding: 2rem;
   background-color: var(--white);
-  border-radius: 2rem;
+  border-radius: 1rem;
+  width: 24rem;
 }
 
 /* feature 3rd */
@@ -296,11 +331,6 @@ footer {
   background-color: #000;
   color: var(--white);
   padding: 8rem 4rem 2rem;
-}
-
-footer .btn {
-  background-color: var(--yellow);
-  color: var(--black);
 }
 
 footer .copyright {
