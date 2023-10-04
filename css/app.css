@@ -148,6 +148,13 @@ h4 {
 /* banner end */
 
 /* navbar */
+nav{
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1;
+}
+
 nav .logo {
   text-decoration: none;
   color: black;
@@ -161,11 +168,6 @@ nav .logo {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 4rem;
-
-  /* position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1; */
 }
 
 nav ul {
