@@ -19,9 +19,13 @@ html {
   padding: 0;
 }
 
+body {
+  background-color: var(--grey);
+}
+
 .container {
-  padding: 2rem 4rem;
   margin: 0;
+  width: 100%;
 }
 
 /* heading */
@@ -115,6 +119,7 @@ h4 {
 /* custom margin end */
 
 /* custom padding */
+/* padding-top */
 .pt-1 {
   padding-top: 1rem;
 }
@@ -132,8 +137,13 @@ h4 {
   padding: 0 2rem;
 }
 
-.px-10 {
-  padding: 0 10rem;
+/* padding-y */
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 2rem 0;
 }
 /* custom padding end */
 
@@ -148,11 +158,12 @@ h4 {
 /* banner end */
 
 /* navbar */
-nav{
+nav {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   z-index: 1;
+  background-color: var(--grey);
 }
 
 nav .logo {
@@ -163,7 +174,6 @@ nav .logo {
 }
 
 .navbar {
-  background-color: var(--grey);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -186,10 +196,6 @@ nav li a:hover {
   transition: 1s ease;
 }
 /* navbar end */
-
-body {
-  background-color: var(--grey);
-}
 
 /* hero-section */
 .hero-section {
@@ -238,8 +244,18 @@ body {
   text-align: center;
 }
 
+.about-wrapper span {
+  position: relative;
+  top: 10px;
+}
+
 .about-wrapper span img {
   border-radius: 100px;
+  transition: transform 0.2s;
+}
+
+.about-wrapper span img:hover {
+  transform: scale(1.05);
 }
 /* about end */
 
@@ -252,9 +268,9 @@ body {
 
 .features .feature-1st {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .titles-wrapper {
@@ -298,7 +314,7 @@ body {
 
 .feature-2nd .card-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2rem;
 }
 
@@ -321,9 +337,9 @@ body {
 .features-3rd .feature-3rd {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
 }
 /* features end */
 
@@ -357,3 +373,43 @@ footer hr.solid {
   margin-top: 4rem;
 }
 /* footer end */
+
+/* --- Media Query --- */
+/* Desktop */
+@media only screen and (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+    margin: auto;
+  }
+
+  .hero-img img {
+    height: 880px;
+  }
+}
+
+/* Laptop */
+@media only screen and (max-width: 1200px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
