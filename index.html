@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flyfarm | Landing page</title>
-    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="src/css/app.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body>
     <header>
@@ -14,16 +15,27 @@
     </header>
     <!-- navbar -->
     <nav>
-      <div id="navbar" class="container navbar">
-        <a href="#" class="logo">Fly-Farm.</a>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#learn">Learn</a></li>
-        </ul>
-        <div>
-          <a href="#" class="btn-secondary">Contact Us</a>
+      <div class="container">
+        <div id="navbar" class="navbar">
+          <a href="#" class="logo">Fly-Farm.</a>
+          <div id="menu-icon" class="menu-icon">
+            <i class="ph ph-list"></i>
+          </div>
+          <ul id="menu-list" class="hidden">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#learn">Learn</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <!-- <li>
+              <div>
+                <a href="#" class="btn-secondary">Contact Us</a>
+              </div>
+            </li> -->
+          </ul>
+          <!-- <div>
+            <a href="#" class="btn-secondary">Contact Us</a>
+          </div> -->
         </div>
       </div>
     </nav>
@@ -115,38 +127,40 @@
 
       <section id="service" class="feature-2nd">
         <div class="container">
-          <div class="heading-wrapper">
-            <h2>Explore Our Pest Control Services</h2>
-            <p class="text-md">
-              We understand the importance of safeguarding your crops from pests
-              and diseases. That's why we offer a service that applies
-              pesticides using drones- a method that is highly accurate and
-              minimizes waste.
-            </p>
-          </div>
-          <div class="f-img-2nd mt-2">
-            <img src="img/dji-agri-1.png" alt="feature-img 2nd" />
-          </div>
-          <div class="card-wrapper mt-2">
-            <div class="card-feature">
-              <h4>Precision Application</h4>
-              <p class="mt-1 text-md">
-                Our drones apply pesticides with high accuracy, minimizing waste
-                and human exposure.
+          <div class="feature-2nd-wrapper">
+            <div class="heading-wrapper">
+              <h2>Explore Our Pest Control Services</h2>
+              <p class="text-md">
+                We understand the importance of safeguarding your crops from
+                pests and diseases. That's why we offer a service that applies
+                pesticides using drones- a method that is highly accurate and
+                minimizes waste.
               </p>
             </div>
-            <div class="card-feature">
-              <h4>Maximum Efficiency</h4>
-              <p class="mt-1 text-md">
-                We can cover large agricultural areas quickly and efficiently
-              </p>
+            <div class="f-img-2nd mt-2">
+              <img src="img/dji-agri-1.png" alt="feature-img 2nd" />
             </div>
-            <div class="card-feature">
-              <h4>Environtmental Safety</h4>
-              <p class="mt-1 text-md">
-                Our pesticides are environmentally friendly, reducing negative
-                impacts
-              </p>
+            <div class="card-wrapper mt-2">
+              <div class="card-feature">
+                <h4>Precision Application</h4>
+                <p class="mt-1 text-md">
+                  Our drones apply pesticides with high accuracy, minimizing
+                  waste and human exposure.
+                </p>
+              </div>
+              <div class="card-feature">
+                <h4>Maximum Efficiency</h4>
+                <p class="mt-1 text-md">
+                  We can cover large agricultural areas quickly and efficiently
+                </p>
+              </div>
+              <div class="card-feature">
+                <h4>Environtmental Safety</h4>
+                <p class="mt-1 text-md">
+                  Our pesticides are environmentally friendly, reducing negative
+                  impacts
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -172,7 +186,6 @@
           </div>
         </div>
       </section>
-
       <!-- feature section end -->
     </main>
     <footer>
@@ -197,6 +210,6 @@
         </div>
       </div>
     </footer>
-    <script src="app.js"></script>
+    <script src="src/js/app.js"></script>
   </body>
 </html>
