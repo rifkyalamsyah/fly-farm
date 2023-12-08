@@ -1,0 +1,472 @@
+---
+import Layout from '../layouts/mainLayout.astro';
+import Banner from '../layouts/banner.astro';
+import Navbar from '../components/navbar.astro';
+import Footer from '../components/footer.astro';
+import '../styles/global.css';
+// images
+import { Image } from 'astro:assets';
+import heroImg from '../assets/img/drone-agri.webp';
+import featureImg1st from '../assets/img/dji-agri-1.webp';
+import featureImg3rd from '../assets/img/dji-agri-3.webp';
+import imgAbout1st from '../assets/img/about/1-120x38.webp';
+import imgAbout2nd from '../assets/img/about/2-120x38.webp';
+import imgAbout3rd from '../assets/img/about/3-120x38.webp';
+
+// title
+const title = 'Home - FlyFarm';
+---
+
+<Layout {title}>
+  <Banner />
+  <Navbar />
+  <!-- hero section -->
+  <header class='hero-section'>
+    <div class='container'>
+      <div class='hero-wrapper py-2'>
+        <h1>
+          Discover Modern
+          <br />
+           Farming Solution with <br />
+           Drone Technology!
+        </h1>
+        <p class='mt-1 text-md text-secondary'>
+          We're revolutionizing agriculture with cutting-edge drone technology.
+          Our mission is to provide efficient and <br />
+           eco-friendly pest control services to enhance your crop yields.
+        </p>
+        <div class='mt-2'>
+          <a href='/' class='btn' data-astro-prefetch>Get Started</a>
+        </div>
+        <div class='hero-img'>
+          <Image
+            class='img'
+            src={heroImg}
+            alt='hero-img'
+            format={'webp'}
+            quality={'low'}
+            loading={'eager'}
+          />
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- hero section end -->
+
+  <main>
+    <!-- about section -->
+    <section id='about' class='about'>
+      <div class='container'>
+        <div class='about-wrapper'>
+          <p class='custom-text'>
+            We're passionate about modernizing
+            <span><Image class='img' src={imgAbout1st} alt='img' /></span>
+             argiculture. Our team of expert isdedicated to bringing lastest
+            technology to farming
+            <span><Image class='img' src={imgAbout2nd} alt='img' /></span>
+             industry. With year of experience, we're committed to providing
+            best solutions for farmers.
+            <span><Image class='img' src={imgAbout3rd} alt='img' /></span>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- about section end -->
+
+    <!-- feature section -->
+    <section class='features'>
+      <div class='container'>
+        <div class='feature-1st'>
+          <div class='titles-wrapper'>
+            <h1>Efficient and Precise Pest Control for Your Crops</h1>
+            <p class='text-md mt-1 text-secondary'>
+              We understand the importance of safeguarding your crops from pests
+              and diseases. That's why we offer a service that applies
+              pesticides using drones- a method that is highly accurate and
+              minimizes waste.
+            </p>
+            <div class='mt-2'>
+              <a
+                href='#Learn-more'
+                class='btn'
+                aria-label='learn more'
+                data-astro-prefetch>Learn more</a
+              >
+            </div>
+          </div>
+          <div class='f-img'>
+            <Image
+              class='img'
+              src={featureImg1st}
+              alt='featureImg1st'
+              format={'webp'}
+              quality={'low'}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- feature section end -->
+
+    <!-- service section -->
+    <section id='service' class='feature-2nd'>
+      <div class='container'>
+        <div class='feature-2nd-wrapper'>
+          <div class='heading-wrapper'>
+            <h2>Explore Our Pest Control Services</h2>
+            <p class='text-md text-secondary'>
+              We understand the importance of safeguarding your crops from pests
+              and diseases. That's why we offer a service that applies
+              pesticides using drones- a method that is highly accurate and
+              minimizes waste.
+            </p>
+          </div>
+          <div class='f-img-2nd mt-2'>
+            <Image
+              class='img'
+              src={featureImg1st}
+              alt='featureImg2nd'
+              format={'webp'}
+              quality={'low'}
+            />
+          </div>
+          <div class='card-wrapper mt-2'>
+            <div class='card-feature'>
+              <h4>Precision Application</h4>
+              <p class='mt-1 text-md text-secondary'>
+                Our drones apply pesticides with high accuracy, minimizing waste
+                and human exposure.
+              </p>
+            </div>
+            <div class='card-feature'>
+              <h4>Maximum Efficiency</h4>
+              <p class='mt-1 text-md text-secondary'>
+                We can cover large agricultural areas quickly and efficiently
+              </p>
+            </div>
+            <div class='card-feature'>
+              <h4>Environtmental Safety</h4>
+              <p class='mt-1 text-md text-secondary'>
+                Our pesticides are environmentally friendly, reducing negative
+                impacts
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- service section end -->
+
+    <!-- learn section -->
+    <section id='learn' class='features-3rd'>
+      <div class='container'>
+        <div class='feature-3rd'>
+          <div class='titles-wrapper'>
+            <h1>Revolutionizing Argiculture with Drones</h1>
+            <p class='text-md mt-1 text-secondary'>
+              Discover how drones are transforming the way we approach forming
+              Our technology of the forefront of modern agriculture, providing
+              efficient solutions for formers.
+            </p>
+            <div class='mt-2'>
+              <a
+                href='#Learn-more'
+                class='btn'
+                aria-label='learn more'
+                data-astro-prefetch>Learn more</a
+              >
+            </div>
+          </div>
+          <div class='f-img'>
+            <Image
+              class='img'
+              src={featureImg3rd}
+              alt='featureImg3rd'
+              format={'webp'}
+              quality={'low'}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- learn section end -->
+  </main>
+  <Footer />
+</Layout>
+<style>
+  /* hero-section */
+  .hero-section {
+    background-color: var(--white);
+  }
+
+  .hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-warpper .title-wrapper {
+    width: 200px !important;
+  }
+
+  .hero-warpper .img {
+    border-radius: 50px;
+  }
+
+  .hero-img {
+    text-align: center;
+  }
+
+  .hero-img .img {
+    -webkit-mask-image: linear-gradient(0deg, #000 80%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(0deg, #000 80%, rgba(0, 0, 0, 0));
+    border-radius: 0 0 2rem 2rem;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    position: relative;
+    top: 2rem;
+  }
+  /* hero-section end */
+
+  /* about */
+  .about-wrapper {
+    padding: 6rem 6rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .about-wrapper span {
+    position: relative;
+    top: 10px;
+  }
+
+  .about-wrapper span .img {
+    border-radius: 100px;
+    transition: transform 0.2s;
+  }
+
+  .about-wrapper span .img:hover {
+    transform: scale(1.05);
+  }
+
+  .about .custom-text {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  /* about end */
+
+  /* features */
+  .features {
+    background-color: var(--white);
+    padding: 6rem 0;
+    border-radius: 2rem;
+  }
+
+  .features .feature-1st {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .titles-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+  }
+
+  .f-img .img {
+    border-radius: 2rem;
+    width: 500px;
+    height: 600px;
+    object-fit: cover;
+  }
+
+  /* feature 2nd */
+  .feature-2nd {
+    padding: 6rem 0;
+    /* background-color: grey; */
+  }
+
+  .feature-2nd .heading-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 2rem;
+  }
+
+  .feature-2nd .heading-wrapper p {
+    max-width: 760px;
+  }
+
+  .feature-2nd .f-img-2nd .img {
+    -webkit-mask-image: linear-gradient(0deg, #000 80%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(0deg, #000 80%, rgba(0, 0, 0, 0));
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 0 0 2rem 2rem;
+  }
+
+  .feature-2nd .card-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .feature-2nd .card-wrapper .card-feature {
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    width: 24rem;
+  }
+
+  /* feature 3rd */
+  .features-3rd {
+    background-color: var(--white);
+    padding: 6rem 0;
+    border-radius: 2rem;
+    position: relative;
+    top: 2rem;
+  }
+
+  .features-3rd .feature-3rd {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  /* features end */
+
+  /* --- Media Query --- */
+  /* Mobile */
+  @media only screen and (max-width: 576px) {
+    .banner {
+      font-size: 12px;
+    }
+
+    /* hero-section */
+    .hero-wrapper {
+      padding: 2rem 1rem;
+    }
+
+    .hero-img .img {
+      height: 300px;
+    }
+    /* hero-section end */
+
+    /* about */
+    .about-wrapper {
+      padding: 6rem 1rem;
+    }
+    /* about end */
+
+    /* features */
+    .features {
+      padding: 4rem 1rem;
+    }
+
+    .feature-2nd {
+      padding: 4rem 1rem;
+    }
+
+    .feature-2nd .heading-wrapper {
+      flex-direction: column;
+      align-items: baseline;
+      text-align: center;
+      padding: 0 1.5rem;
+    }
+
+    .feature-2nd .heading-wrapper p {
+      max-width: 100%;
+    }
+
+    .feature-2nd .card-wrapper {
+      padding: 0 1rem;
+      gap: 1rem;
+    }
+
+    .titles-wrapper {
+      width: 100%;
+    }
+
+    .f-img .img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .features-3rd {
+      padding: 4rem 1rem;
+    }
+
+    /* features end */
+  }
+
+  /* Tablet */
+  @media only screen and (max-width: 768px) {
+    /* hero-section */
+    .hero-wrapper br {
+      display: none;
+    }
+    /* hero-section end */
+
+    /* features */
+    .features .feature-1st {
+      flex-direction: column-reverse;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .feature-2nd .card-wrapper {
+      flex-direction: column;
+    }
+
+    .feature-2nd .heading-wrapper p {
+      max-width: 380px;
+    }
+
+    .feature-2nd .f-img-2nd .img {
+      height: 300px;
+    }
+
+    .feature-2nd .card-wrapper .card-feature {
+      width: auto;
+      text-align: center;
+    }
+
+    .features-3rd .feature-3rd {
+      flex-direction: column;
+    }
+
+    .features-3rd .feature-3rd {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
+    .features-3rd .f-img .img {
+      width: 100%;
+      height: 100%;
+      max-height: 500px;
+      object-fit: fill;
+    }
+    /* features end */
+  }
+
+  /* Laptop */
+  @media only screen and (max-width: 1200px) {
+    .feature-2nd .card-wrapper {
+      gap: 1rem;
+    }
+  }
+
+  /* Desktop */
+  @media only screen and (min-width: 1400px) {
+    .hero-img .img {
+      height: 880px;
+    }
+  }
+</style>

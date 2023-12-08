@@ -1,0 +1,132 @@
+---
+import MenuIcon from '../components/icon/list.astro';
+---
+
+<nav>
+  <div class='container'>
+    <div id='navbar' class='navbar'>
+      <a href='/' class='logo' data-astro-prefetch>Fly-Farm.</a>
+      <div id='menu-icon' class='menu-icon'>
+        <!-- <i class='bi bi-list'></i> -->
+        <MenuIcon />
+      </div>
+      <ul id='menu-list' class='hidden'>
+        <li><a href='/' data-astro-prefetch>Home</a></li>
+        <li><a href='#about' data-astro-prefetch>About</a></li>
+        <li><a href='#service' data-astro-prefetch>Service</a></li>
+        <li><a href='#learn' data-astro-prefetch>Learn</a></li>
+        <li><a href='#contact' data-astro-prefetch>Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script is:inline>
+  const menuIcon = document.getElementById('menu-icon');
+  const menuList = document.getElementById('menu-list');
+
+  menuIcon.addEventListener('click', () => {
+    menuList.classList.toggle('hidden');
+  });
+</script>
+
+<style>
+  /* navbar */
+  nav {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--grey);
+  }
+
+  nav .logo {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    font-size: 1.5rem;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav li a {
+    text-decoration: none;
+    color: var(--black);
+  }
+
+  nav li a:hover {
+    color: var(--dark-grey);
+    transition: 1s ease;
+  }
+
+  nav .menu-icon {
+    display: none;
+    align-items: center;
+    font-size: 32px;
+  }
+  /* navbar end */
+
+  /* Mobile */
+  @media only screen and (max-width: 576px) {
+    nav {
+      padding: 0 1rem;
+    }
+  }
+
+  /* Tablet */
+  @media only screen and (max-width: 992px) {
+    /* navbar */
+    nav {
+      border-bottom: 1px solid #dadada;
+    }
+
+    .navbar {
+      width: 100%;
+      padding: 1rem 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      flex-direction: column;
+      width: 100%;
+      padding: 1rem 0;
+    }
+
+    nav ul.hidden {
+      display: none;
+    }
+
+    nav .menu-icon {
+      display: flex;
+      align-items: center;
+      font-size: 32px;
+    }
+    /* navbar end */
+  }
+
+  /* Laptop */
+  @media only screen and (max-width: 1200px) {
+    .navbar {
+      padding: 1.5rem 0;
+    }
+  }
+
+  /* Dekstop */
+  @media only screen and (min-width: 1400px) {
+    .navbar {
+      padding: 1.5rem 0;
+    }
+  }
+</style>
