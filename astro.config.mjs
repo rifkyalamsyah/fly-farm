@@ -5,4 +5,6 @@ export default defineConfig({
   output: 'static',
   compressHTML: false,
   prefetch: true,
+  site: 'https://rifkyalamsyah.github.io',
+  base: '/fly-farm',
 });
