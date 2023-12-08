@@ -5,13 +5,13 @@ import MenuIcon from '../components/icon/list.astro';
 <nav>
   <div class='container'>
     <div id='navbar' class='navbar'>
-      <a href='/' class='logo' data-astro-prefetch>Fly-Farm.</a>
+      <a href='/fly-farm' class='logo' data-astro-prefetch>Fly-Farm.</a>
       <div id='menu-icon' class='menu-icon'>
         <!-- <i class='bi bi-list'></i> -->
         <MenuIcon />
       </div>
       <ul id='menu-list' class='hidden'>
-        <li><a href='/' data-astro-prefetch>Home</a></li>
+        <li><a href='/fly-farm' data-astro-prefetch>Home</a></li>
         <li><a href='#about' data-astro-prefetch>About</a></li>
         <li><a href='#service' data-astro-prefetch>Service</a></li>
         <li><a href='#learn' data-astro-prefetch>Learn</a></li>
@@ -119,14 +119,14 @@ import MenuIcon from '../components/icon/list.astro';
   /* Laptop */
   @media only screen and (max-width: 1200px) {
     .navbar {
-      padding: 1.5rem 0;
+      padding: 1rem 0;
     }
   }
 
   /* Dekstop */
   @media only screen and (min-width: 1400px) {
     .navbar {
-      padding: 1.5rem 0;
+      padding: 1rem 0;
     }
   }
 </style>

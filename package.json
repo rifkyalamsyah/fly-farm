@@ -1,5 +1,5 @@
 {
-  "name": "galactic-kelvin",
+  "name": "fly-farm",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -12,7 +12,6 @@
   "dependencies": {
     "@astrojs/check": "^0.3.1",
     "astro": "^4.0.3",
-    "bootstrap-icons": "^1.11.2",
     "typescript": "^5.3.3"
   }
 }
