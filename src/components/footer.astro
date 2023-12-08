@@ -1,0 +1,91 @@
+<footer>
+  <div class='container'>
+    <div class='cta'>
+      <h3>
+        Unlock Your Farming Potencial. <br />
+         Begin Your Joirney Now!
+      </h3>
+      <div class='mt-2'>
+        <a href='/' class='btn btn-yellow' data-astro-prefetch>Get Started</a>
+      </div>
+    </div>
+    <hr class='solid' />
+    <div class='copyright mt-2'>
+      <p>&copy; 2023 Flyfarm - All rights reserved</p>
+      <div class='link-nav'>
+        <a href='#Term-of-Service' data-astro-prefetch>Term of Service</a>
+        <a href='#Policy-Service' data-astro-prefetch>Policy Service</a>
+        <a href='#Cookie-Policy' data-astro-prefetch>Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* footer */
+  footer {
+    text-align: center;
+    background-color: #000;
+    color: var(--white);
+    padding: 8rem 4rem 2rem;
+  }
+
+  footer .copyright {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer .link-nav {
+    display: flex;
+    gap: 2rem;
+  }
+
+  footer .link-nav a {
+    text-decoration: none;
+    color: var(--white);
+  }
+
+  footer .link-nav a:hover {
+    color: var(--dark-grey);
+  }
+
+  footer hr.solid {
+    border-top: 0.5px solid var(--dark-grey);
+    border-bottom: none;
+    border-radius: 10px;
+    margin-top: 4rem;
+  }
+  /* footer end */
+
+  /* mobile */
+  @media only screen and (max-width: 576px) {
+    /* footer */
+    footer {
+      padding: 8rem 1rem 2rem;
+    }
+
+    footer br {
+      display: none;
+    }
+
+    footer .link-nav {
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    /* footer end */
+  }
+
+  /* Tablet */
+  @media only screen and (max-width: 768px) {
+    /* footer */
+    footer .copyright {
+      flex-direction: column-reverse;
+      gap: 2rem;
+    }
+
+    footer .link-nav {
+      justify-content: center;
+    }
+    /* footer end */
+  }
+</style>
