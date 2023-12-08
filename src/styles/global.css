@@ -43,6 +43,16 @@ h4 {
 .text-sm {
   font-size: 0.875rem;
 }
+
+.fs-3{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.fs-4{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 /* custom paragraph end */
 
 /* custom button */
