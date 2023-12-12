@@ -28,7 +28,7 @@ h4 {
 /* heading end */
 
 /* custom paragraph */
-.text-secondary{
+.text-secondary {
   color: var(--dark-grey);
 }
 
@@ -44,12 +44,12 @@ h4 {
   font-size: 0.875rem;
 }
 
-.fs-3{
+.fs-3 {
   font-size: 2rem;
   font-weight: bold;
 }
 
-.fs-4{
+.fs-4 {
   font-size: 1.5rem;
   font-weight: bold;
 }
